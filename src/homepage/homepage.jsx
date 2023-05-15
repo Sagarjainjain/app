@@ -15,11 +15,13 @@ const HomePage = () => {
     <>
       <section className="section-homepage">
         <nav>
-          <img src={logo} alt="brand_logo" />
-          <h1>Explore Yourself</h1>
+          <div className="nav-brand">
+            <img src={logo} alt="brand_logo" />
+            <h1>Explore Yourself</h1>
+          </div>
           <div className="logo-profile">
             <Link to="/profile">
-          <CgProfile  size={30} color="white" height={0}
+          <CgProfile    className="brand"
            />
             </Link>
           </div>

@@ -29,7 +29,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
 }
-.ey-serachbar_input form {
+.search-form{
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: repeat(4, 1fr); 
@@ -104,6 +104,7 @@
     border: 0;
     border-radius: 10px;
     width: 100%;
+    padding: 0.50rem;
 }
 }
 /* mobile ratio */
@@ -112,12 +113,16 @@
     display: flex;
     justify-content: center;
   }
-    .ey-serachbar_input form {
+    .search-form{
   display: flex;
   flex-direction: column;
+  margin: 1rem 0;
 }
-  .ey-serachbar_input {
-    padding-top: 1rem;
+ .search-form {
+  padding-top: 0rem;
+ }
+.ey-serachbar_input {
+
     position: absolute;
     width: 95%;
     top: 12rem;
@@ -144,5 +149,6 @@
   .ey-serachbar_input button {
     padding: 0.25rem ;
     width: 90%;
+    padding: 0.50rem;
   }
 }

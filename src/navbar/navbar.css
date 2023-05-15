@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #464F65;
+    margin-bottom: 2rem;
+}
+.navbar-button {
+    color: white;
+    font-size: 32px;
+}
+.profile {
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #2173FD;
+    font-weight: bold;
+}

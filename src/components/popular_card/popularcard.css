@@ -70,7 +70,7 @@ article {
 /* mobile ratio */
 @media screen and (min-width: 100px) and (max-width: 480px) {
   .ey-popular_card {
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
    .ey-grid {
     grid-template-columns: repeat(1, 1fr);

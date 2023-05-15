@@ -12,12 +12,15 @@
 .mg-r {
     margin-right: 10px;
 }
+
 .width-80 {
     width: 95%;
     padding-right: 0rem ;
 }
 .width-60 {
-    padding-right: 0;
+    padding-right: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 .width-90 {
     padding-right: 0.50rem ;

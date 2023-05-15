@@ -8,6 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 // import Promotion from "../../components/promotion/Promotion";
 import Accordian from "../../components/accordian/Accordian";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../navbar/Navbar";
 
 // const image =
 //   "https://plus.unsplash.com/premium_photo-1669748157807-30514e416843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60";
@@ -22,6 +23,7 @@ const FlightList = () => {
     }
   return (
     <>
+    <Navbar/>
       <div className="ey-flight_list-header section-padding">
         <div className="ey-flight_list-header_search">
           <AiOutlineSearch />
@@ -45,7 +47,6 @@ const FlightList = () => {
         <article>
           {flights.map((flight) => (
             <div key={flight._id} className="ey-flight_lists">
-
               <div className="ey-flight_lists_media">
                 {!flight.flightdetails ? (
                   <h1>loading</h1>

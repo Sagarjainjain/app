@@ -1,0 +1,99 @@
+.section-homepage {
+  background-color: #001736;
+  
+}
+.article {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+     background-color: #001736;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav h1 {
+  font-size: 30px;
+  color: white;
+}
+
+nav img {
+  height: 75px;
+  width: 75px;
+}
+.logo-profile {
+  margin-left: 2rem;
+  background-color: blue;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+/* buttons  */
+
+.ey-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+}
+.ey-options_flight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ey-options_flight p {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+.ey-option_flight_button {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 3.3rem;
+  background-color: white;
+}
+.ey-option_flight_button_icon {
+  padding: 1.5rem;
+  font-size: 50px;
+  background-color: #18c3f7;
+  border-radius: 3rem;
+}
+/* promotions  */
+
+/*  tablet screens */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  nav h1 {
+    font-size: 20px;
+  }
+  nav img {
+    height: 50px;
+    width: 50px;
+  }
+}
+/* mobile ratio */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  nav h1 {
+    font-size: 18px;
+  }
+  nav img {
+    height: 50px;
+    width: 50px;
+  }
+  .ey-options {
+    justify-content: space-between;
+  }
+  .ey-options_flight p {
+    font-size: 18px;
+  }
+  .ey-option_flight_button {
+    padding: 0.25rem;
+  }
+  .ey-option_flight_button_icon {
+    font-size: 30px;
+  }
+}

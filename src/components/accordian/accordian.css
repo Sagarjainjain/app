@@ -1,0 +1,121 @@
+.ey-filter {
+  width: 100%;
+  margin-top: 2rem;
+}
+.ey-filter_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ey-filter_content {
+  margin-top: 2rem;
+  transition: all 0.5s;
+}
+.ey-filter_content-airline p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2173fd;
+}
+.ey-filter_content-airline-input {
+  padding: 0.25rem;
+}
+.ey-filter_content-airline-input input {
+  margin-right: 0.75rem;
+}
+.ey-filter_content-price {
+  margin-top: 1rem;
+}
+.ey-filter_content-price p {
+  color: #2173fd;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.ey-filter_content-price-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ey-filter_content-price-input p {
+  font-weight: 400;
+  color: gray;
+}
+.ey-filter_content-duration {
+  margin-top: 1rem;
+}
+.ey-filter_content-duration p {
+  font-weight: bold;
+  color: #2173fd;
+  margin-bottom: 10px;
+}
+.ey-filter_content-duration-input p {
+  font-weight: 400;
+  color: gray;
+}
+
+/*  tablet screens */
+@media screen and (min-width: 481px) and (max-width: 760px) {
+
+    .ey-filter_content {
+    background-color: white;
+    padding: 2rem;
+    max-width: 400px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+   left: 0; 
+  right: 0; 
+  top: 275px;
+  margin-left: auto; 
+  margin-right: auto; 
+  border-radius: 10px;
+  } 
+}
+@media screen and (min-width: 761px) and (max-width: 1080px) {
+
+    .ey-filter_content {
+    background-color: white;
+    padding: 2rem;
+    max-width: 364px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+   left: 0; 
+  right: 275px; 
+  top: 403px;
+  margin-left: auto; 
+  margin-right: auto; 
+border-radius: 10px;
+  } 
+}
+/* mobile ratio */
+@media screen and (min-width: 322px) and (max-width: 480px) {
+
+    .ey-filter_content {
+    background-color: white;
+    padding: 2rem;
+    max-width: 250px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+   left: 0; 
+  right: 0; 
+  top: 400px;
+  margin-left: auto; 
+  margin-right: auto; 
+border-radius: 10px;
+  } 
+}
+
+@media screen and (min-width: 50px) and (max-width: 321px) {
+  .ey-filter_content {
+    background-color: white;
+    padding: 2rem;
+    max-width: 220px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+   left: 0; 
+  right: 0; 
+  top: 350px;
+  margin-left: auto; 
+  margin-right: auto; 
+border-radius: 10px;
+  }
+}

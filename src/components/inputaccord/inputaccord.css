@@ -1,0 +1,80 @@
+.ey-input_accord {
+    margin-left: 0.75rem;
+   width: 300px;
+   transition: all 0.75s ;
+}
+.ey-input_accord-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.50rem;
+    border-radius: 5px;
+    border: 1.5px solid gray;
+}
+.ey-input_accord-input {
+    display: flex;
+}
+.ey-input_accord-input p {
+    margin-left: 10px;
+}
+.ey-collaped-card-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.ey-collapsed-card {
+    width: 250px;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0.5rem 1rem;
+     border-radius: 5px;
+     position: absolute;
+     background-color: white;
+
+}
+.ey-collaped-card-input_person {
+    display: flex;
+}
+.ey-collaped-card-input_change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ey-collaped-card-input_change button {
+    padding: 5px 15px;
+    margin: 1rem;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-weight: bold   ;
+    background-color: #2173Fd;
+   
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.ey-collaped-card-input_change button:hover {
+
+    background-color: #224f9e;
+}
+
+@media screen and (min-width: 481px) and (max-width: 820px) {
+    .ey-input_accord {
+        margin: 0;
+    }
+    .ey-collapsed-card {
+        width: 275px;
+    }
+}
+/* mobile ratio */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+
+    .ey-input_accord {
+        width: 100%;
+        margin: 0;
+    }
+    .ey-collapsed-card {
+        width: 75%;
+    }
+}

@@ -1,0 +1,313 @@
+.ey-flight_list-header {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #001736;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.ey-flight_list-header_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+  background-color: #2173fd;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+}
+.ey-flight_list-header_title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
+  color: white;
+}
+
+.ey-sorting {
+  max-width: 400px;
+
+  padding: 1rem;
+  margin: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.ey-sorting_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ey-sorting_buttons button {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #2173fd;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: bold;
+  margin: 1rem 0.25rem 0;
+  padding: 0.75rem 1.5rem;
+}
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* flight list */
+.ey-card {
+  display: flex;
+  justify-content: space-between ;
+}
+article {
+  margin: 3rem 2rem;
+}
+.ey-flight_lists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.ey-flight_lists_media {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  padding-left: 1rem;
+  flex-direction: column;
+}
+.ey-flight_lists_media img {
+  width: 100%;
+  height: 100%;
+}
+
+.ey-flight_lists_flight-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid gray;
+}
+.ey-flight_lists_flight-details-title {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.ey-flight_lists_flight-details-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ey-flight_lists_flight-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #2173fd;
+}
+.ey-flight_lists_flight-price button {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  background-color: #001736;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+/*  tablet screens */
+@media screen and (min-width: 481px) and (max-width: 830px) {
+  .ey-sorting_buttons button {
+    padding: 0.75rem 1rem;
+  }
+  .ey-sorting {
+    min-width: 150px;
+    flex-direction: row;
+  }
+  article {
+    margin: 0;
+  }
+  .ey-flight_list-header {
+    justify-content: center;
+  }
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ey-flight_lists {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    margin: 2rem 2rem;
+    justify-content: space-between;
+  }
+
+  .ey-flight_lists_media {
+    display: flex;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    padding-left: 1rem;
+  }
+
+  .ey-flight_lists_flight-details-title {
+    padding: 0 3rem;
+  }
+
+  .ey-flight_lists_flight-price {
+    padding: 1rem 1rem;
+  }
+}
+/* mobile ratio */
+@media screen and (min-width: 322px) and (max-width: 480px) {
+  .ey-sorting {
+    width: 80%;
+    flex-direction: row;
+  }
+  .ey-flight_list-header {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .ey-flight_lists {  
+      flex-direction: column;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ey-flight_list-header_search {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+  }
+  .ey-flight_list-header_title h2 {
+    font-size: 20px;
+  }
+  .section {
+    justify-items: center;
+  }
+  .ey-flight_lists_flight-details {
+    border: 0;
+    padding:1 ;
+  }
+  .ey-flight_lists_flight-details-title {
+    font-size: 14px;
+    padding: 2rem 2rem;
+  }
+  .ey-sorting_buttons button {
+    padding: 0.75rem 0.5rem;
+    font-size: 14px;
+  }
+  .ey-card {
+    border-bottom: 1px solid gray;;
+  }
+  .ey-flight_lists_flight-price {
+    flex-direction: row;
+   
+    padding: 10px;
+    font-size: 14px;
+  }
+  article {
+    margin: 0;
+    width: 100%;
+    justify-items: center;
+    
+  }
+  .ey-flight_lists {
+    width: 90%;
+    margin: 22px;
+  }
+  .ey-flight_lists_media img {
+    height: 150px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 50px) and (max-width: 321px) {
+  .ey-sorting {
+   margin: 1rem 0.25rem;
+   flex-direction: row;
+   width: 80%;
+  }
+  .ey-flight_list-header {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .ey-flight_lists {
+      flex-direction: column;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ey-flight_list-header_search {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+  }
+  .ey-flight_list-header_title h2 {
+    font-size: 20px;
+  }
+  .section {
+    justify-items: center;
+  }
+  .ey-flight_lists_flight-details {
+    border: 0;
+    padding:1 ;
+  }
+  .ey-flight_lists_flight-details-title {
+    font-size: 14px;
+    padding: 1rem 1rem;
+  }
+  .ey-sorting_buttons button {
+    padding: 0.5rem 0.50rem;
+    font-size: 12px;
+  }
+  .ey-card {
+    border-bottom: 1px solid gray;;
+  }
+  .ey-flight_lists_flight-price {
+    flex-direction: row;
+   
+    padding: 10px;
+    font-size: 14px;
+  }
+  article {
+    margin: 0;
+    width: 100%;
+    justify-items: center;
+    
+  }
+  .ey-card {
+    padding-bottom: 10px;
+  }
+  .ey-flight_lists {
+    width: 90%;
+    margin: 15px;
+  }
+  .ey-flight_lists_media {
+    display: flex;
+    height: 70px;
+    width: 70px;
+    padding: 0;
+  }
+}

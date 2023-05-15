@@ -1,0 +1,148 @@
+.ey-brand  {
+  position: absolute;
+  z-index: 1;
+}
+.ey-coverpage {
+  width: 100%;
+  height: 40vh;
+  object-position: center;
+  background-image: url("../../assets/flightpagecover.png");
+  background-repeat: no-repeat;
+ background-size: cover;
+}
+.ey-coverpage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  z-index: -1;
+}
+.ey-searchbar {
+  display: flex;
+  justify-content: center;
+}
+.ey-serachbar_input {
+  width: 90%;
+  top: 15rem;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+.ey-serachbar_input form {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.ey-serachbar_input input {
+  padding: 12px 10px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+.ey-serachbar_input button {
+    background-color: tomato;
+    margin: 0.50rem ;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem 0;
+}
+.ey-serachbar_input button:hover {
+  background-color: rgb(223, 74, 47);
+}
+.ey-serachbar_input-group {
+  display: flex;
+  justify-content: space-between;
+}
+/* tablet Ratio */
+@media screen and (min-width: 481px) and (max-width: 820px) {
+  .ey-searchbar {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .ey-serachbar_input {
+    padding-top: 1rem;
+    position: absolute;
+    width: 95%;
+    top: 15rem;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+  }
+  .ey-serachbar_input label {
+    margin-left: 1rem;
+    font-size: 16px;
+  }
+  .ey-serachbar_input input {
+    width: 95%;
+    padding: 12px 10px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
+  .ey-serachbar_input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ey-serachbar_input button {
+    background-color: tomato;
+    margin: 0.50rem ;
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+}
+}
+/* mobile ratio */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  .ey-searchbar {
+    display: flex;
+    justify-content: center;
+  }
+    .ey-serachbar_input form {
+  display: flex;
+  flex-direction: column;
+}
+  .ey-serachbar_input {
+    padding-top: 1rem;
+    position: absolute;
+    width: 95%;
+    top: 12rem;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+  }
+  .ey-serachbar_input label {
+    margin-left: 1rem;
+    font-size: 16px;
+  }
+  .ey-serachbar_input input {
+    width: 95%;
+    padding: 12px 10px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
+  .ey-serachbar_input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ey-serachbar_input button {
+    padding: 0.25rem ;
+    width: 90%;
+  }
+}

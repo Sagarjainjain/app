@@ -1,0 +1,9 @@
+.ey-promotion {
+    width: 90%;
+}
+.ey-promotion img {
+    width: 100%;
+    border-radius: 2rem;
+    height: 100%;
+    object-fit: cover;
+}

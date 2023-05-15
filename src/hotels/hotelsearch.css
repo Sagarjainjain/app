@@ -1,0 +1,124 @@
+.ey-hotel_search {
+  background-image: url("../assets/HotelCP.jpg");
+  background-size: cover;
+  height: 60vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 100%;
+  display: flex;
+}
+.ey-hotel_search-card-form-group1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+}
+.ey-hotel_search-card-form-group2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.25rem;
+}
+.ey-hotel_search-card {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ey-hotel_search-card button {
+    background-color: tomato;
+
+    margin-left:1rem ;
+    padding: 0.50rem 2rem;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.ey-hotel_search-card button:hover {
+  background-color: rgb(223, 74, 47);
+}
+.ey-hotel_search-card input {
+  padding: 0.35rem 1rem;
+  font-size: 16px;
+}
+.ey-deals {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+.ey-travel_deals-title {
+    text-align: center;
+}
+.ey-travel_deals-title p {
+    margin-top: 10px;
+    color: #2173fd;
+    font-size: 16px;
+}
+.ey-travel_deals {
+    margin-bottom: 5rem;
+  height: 200px;
+  width: 200px;
+}
+.ey-travel_deals img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.pop {
+  margin-top: 2rem;
+  background-color: gray;
+}
+
+@media screen and (min-width: 481px) and (max-width: 820px) {
+  form {
+    flex-direction: column;
+  }
+  .pop {
+    margin-top: 1rem;
+  }
+   .ey-hotel_search-card button {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .ey-hotel_search-card-form-group2 {
+    padding-top: 1rem;
+  }
+}
+/* mobile ratio */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+  form {
+    width: 100%;
+    flex-direction: column;
+  }
+  .ey-hotel_search-card button {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .ey-hotel_search {
+    padding-bottom: 1rem;
+    align-items: flex-end;
+  }
+  .ey-hotel_search-card-form-group2 {
+    padding-top: 1rem;
+  }
+    .pop {
+    margin-top: 0rem;
+  }
+  .ey-hotel_search-card {
+    width: 85%;
+  }
+  .ey-deals {
+    flex-direction: column;
+  }
+
+}

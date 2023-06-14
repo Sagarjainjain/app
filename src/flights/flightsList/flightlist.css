@@ -160,7 +160,7 @@ article {
 
 /*  tablet screens */
 @media screen and (min-width: 481px) and (max-width: 830px) {
-  .ey-sorting_buttons button {
+  /* .ey-sorting_buttons button {
     padding: 0.75rem 1rem;
   }
   .ey-sorting {
@@ -174,12 +174,14 @@ article {
     justify-content: center;
   }
   .section {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
   }
   .ey-flight_lists {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 80%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 10px;
@@ -205,6 +207,73 @@ article {
     padding: 1rem 1rem;
   }
   .noflights {
+    width: 80%;
+  } */
+   .ey-sorting {
+    width: 80%;
+    flex-direction: row;
+  }
+  .ey-flight_list-header {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .ey-flight_lists {  
+      flex-direction: column;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ey-flight_list-header_search {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+  }
+  .ey-flight_list-header_title h2 {
+    font-size: 20px;
+  }
+  .section {
+    justify-items: center;
+  }
+  .ey-flight_lists_flight-details {
+    border: 0;
+    padding:1 ;
+  }
+  .ey-flight_lists_flight-details-title {
+    font-size: 14px;
+    padding: 2rem 2rem;
+  }
+  .ey-sorting_buttons button {
+    padding: 0.75rem 0.5rem;
+    font-size: 14px;
+  }
+  .ey-card {
+    border-bottom: 1px solid gray;;
+  }
+  .ey-flight_lists_flight-price {
+    flex-direction: row;
+   
+    padding: 10px;
+    font-size: 14px;
+  }
+  article {
+    margin: 0;
+    width: 100%;
+    justify-items: center;
+    
+  }
+  
+  .ey-flight_lists {
+    width: 90%;
+    margin: 22px;
+  }
+  .ey-flight_lists_media img {
+    height: 120px;
+    padding: 0;
+  }
+    .noflights {
     width: 80%;
   }
 }
@@ -271,7 +340,8 @@ article {
     margin: 22px;
   }
   .ey-flight_lists_media img {
-    height: 150px;
+    margin-top: 1rem;
+    object-fit: contain;
     padding: 0;
   }
     .noflights {

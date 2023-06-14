@@ -7,9 +7,21 @@ import "./homepage.css";
 import promotion from "../assets/Promotion_page.jpg";
 import Footer from "../footer/Footer";
 import Promotion from "../components/promotion/Promotion";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+// import {fetchFlights} from "../actions/flight"
+// import { useSelector , useDispatch} from "react-redux"
 
 const HomePage = () => {
+  const navigate = useNavigate()
+  const User = localStorage.getItem("profile");
+
+  const Handlenavigation = () => {
+    if(User) {
+      navigate("/profile")
+    } else {
+      navigate("/login")
+    }
+  }
 
   return (
     <>
@@ -20,10 +32,10 @@ const HomePage = () => {
             <h1>Explore Yourself</h1>
           </div>
           <div className="logo-profile">
-            <Link to="/profile">
-          <CgProfile    className="brand"
+            
+          <CgProfile onClick={Handlenavigation}    className="brand"
            />
-            </Link>
+        
           </div>
         </nav>
         <div className="ey-options section-padding">
@@ -39,9 +51,11 @@ const HomePage = () => {
             <p>Flights</p>
           </div>
           <div className="ey-options_flight">
+            <Link to="/hotel">
             <div className="ey-option_flight_button">
               <FaHotel className="ey-option_flight_button_icon" color="white" />
             </div>
+            </Link>
             <p>Hotels</p>
           </div>
         </div>

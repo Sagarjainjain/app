@@ -6,8 +6,9 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-brand'>
-      <img src={logo} alt="" />
+      <img src={logo} alt="Brand-logo" />
       <h1>Explore Yourself</h1>
+      <p>Its Practice Based Project it cannot directly book or reserve flights and hotels</p>
       </div>
       <p>Version 1.0</p>
     </div>

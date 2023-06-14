@@ -27,11 +27,18 @@
 
 .ey-sorting {
   max-width: 400px;
+  max-height:250px;
   border-radius: 10px;
   padding: 1rem;
   margin: 2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+}
+.ey-promotion {
+
+  height: 500px;
+  width: 100px;
+
 }
 .ey-sorting_buttons {
   display: flex;
@@ -58,6 +65,7 @@
 .section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 /* flight list */
 .ey-card {
@@ -78,18 +86,26 @@ article {
 } 
 
 
-
+.noflights {
+  height: 500px;
+  width: 600px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .ey-flight_lists_media {
   display: flex;
   align-items: center;
   width: 100px;
-  height: 50px;
+  height: 70px;
   padding-left: 1rem;
   flex-direction: column;
 }
 .ey-flight_lists_media img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .ey-flight_lists_flight-details {
@@ -102,12 +118,21 @@ article {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
+    text-align: center;
+  white-space: nowrap;
 }
 
 .ey-flight_lists_flight-details-data {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+.ey-flight_lists_flight-details-data p {
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  
 }
 .ey-flight_lists_flight-price {
   display: flex;
@@ -167,7 +192,9 @@ article {
     align-items: center;
     width: 75px;
     height: 75px;
+
     padding-left: 1rem;
+    padding-top: 1rem;
   }
 
   .ey-flight_lists_flight-details-title {
@@ -176,6 +203,9 @@ article {
 
   .ey-flight_lists_flight-price {
     padding: 1rem 1rem;
+  }
+  .noflights {
+    width: 80%;
   }
 }
 /* mobile ratio */
@@ -243,6 +273,9 @@ article {
   .ey-flight_lists_media img {
     height: 150px;
     padding: 0;
+  }
+    .noflights {
+    width: 80%;
   }
 }
 
@@ -315,5 +348,9 @@ article {
     height: 70px;
     width: 70px;
     padding: 0;
+    margin-top: 1rem;
+  }
+    .noflights {
+    width: 80%;
   }
 }

@@ -1,0 +1,25 @@
+.no-hotel {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/nohotel.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: fill;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nohotel-container {
+  border-radius: 30px;
+  height: 300px;
+  width: 300px;
+  padding: 1rem;
+}
+.no-hotel p {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

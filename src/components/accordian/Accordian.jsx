@@ -1,12 +1,10 @@
 import React, { useState} from "react";
 import "./accordian.css";
-import flight from "../../api/flight_details.json";
+
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const Accordian = () => {
+const Accordian = ({ setFlightData, flightData }) => {
   const [isOpen, setisOpen] = useState(false);
-
-
 
 
   return (
@@ -23,15 +21,20 @@ const Accordian = () => {
         <div></div>
       ) : (
         <div className="ey-filter_content">
-          <div className="ey-filter_content-airline">
+          {/* <div className="ey-filter_content-airline">
             <p>Select Airline</p>
             {flight.map((item) => (
               <div key={item._id} className="ey-filter_content-airline-input">
-                <input type="checkbox" name="" id={item.flight_name} />
+                <input
+                  type="checkbox"
+                  name=""
+                  id={item.flight_name}
+                  onClick={() => Filterdata(item.flight_name)}
+                />
                 <label htmlFor={item.flight_name}>{item.flight_name}</label>
               </div>
             ))}
-          </div>
+          </div> */}
           <div className="ey-filter_content-price">
             <p>Select Price</p>
             <div className="ey-filter_content-price-input">

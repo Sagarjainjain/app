@@ -54,10 +54,19 @@ article {
   
   font-size: 20px;
 }
-
-.ey-popular_card-cards_title-links a {
-    padding: 0.25rem;
+.ey-popular_card-cards_title-links {
+  display: flex;
+  transition: all 1s ease-in ;
+  
 }
+.ey-popular_card-cards_title-links p {
+    
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    color: #006eff;
+}
+
 /* tablet Ratio */
 @media screen and (min-width: 481px) and (max-width: 1020px) {
   .ey-grid {
@@ -66,11 +75,28 @@ article {
   .ey-popular_card-cards {
     width: 300px;
   }
+    .ey-popular_card-cards {
+    height: 130px;
+  }
+  .ey-popular_card-cards_media img {
+    height: 100%;
+  }
+  .ey-popular_card-cards_title-links p  {
+    font-size: 12px;
+  }
 }
-/* mobile ratio */
-@media screen and (min-width: 100px) and (max-width: 480px) {
-  .ey-popular_card {
+@media screen and (min-width: 301px) and (max-width: 480px) {
+   .ey-popular_card {
     padding-top: 10rem;
+  }
+  .ey-popular_card-cards {
+    height: 130px;
+  }
+  .ey-popular_card-cards_media img {
+    height: 100%;
+  }
+  .ey-popular_card-cards_title-links p  {
+    font-size: 10px;
   }
    .ey-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -92,4 +118,49 @@ article {
     .ey-popular_card-cards {
     width: 90%;
   }
+}
+/* mobile ratio */
+@media screen and (min-width: 100px) and (max-width: 300px) {
+  .ey-popular_card {
+    padding-top: 10rem;
+  }
+  .ey-popular_card-cards {
+    height: 150px;
+  }
+  .ey-popular_card-cards_media img {
+    height: 100%;
+  }
+  .ey-popular_card-cards_title-links p  {
+    font-size: 10px;
+  }
+   .ey-grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    
+  }
+  .ey-popular_card-title {
+    text-align: center;
+  }
+.ey-popular_card-cards_title h4 {
+  font-size: 14px;
+}
+.ey-popular_card-cards_title-links a {
+  font-size: 12px;
+}
+  .ey-popular_card-cards_media img {
+    width: 120px;
+  }
+    .ey-popular_card-cards {
+    width: 90%;
+  }
+
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+
+   .ey-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    
+  }
+  
 }

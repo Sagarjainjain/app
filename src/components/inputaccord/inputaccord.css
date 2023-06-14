@@ -1,5 +1,6 @@
 .ey-input_accord {
     margin-left: 0.75rem;
+    margin-top: 20px;
    width: 300px;
    transition: all 0.75s ;
 }
@@ -61,20 +62,32 @@
 
 @media screen and (min-width: 481px) and (max-width: 820px) {
     .ey-input_accord {
-        margin: 0;
+        width: 100%;
+        margin: 1rem 0 0 0;
     }
     .ey-collapsed-card {
-        width: 275px;
+        width: 75%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .ey-input_accord-input {
+        margin-right: 5px;
     }
 }
 /* mobile ratio */
 @media screen and (min-width: 100px) and (max-width: 480px) {
-
     .ey-input_accord {
         width: 100%;
-        margin: 0;
+        margin: 1rem 0 0 0;
     }
     .ey-collapsed-card {
         width: 75%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .ey-input_accord-input {
+        margin-right: 5px;
     }
 }

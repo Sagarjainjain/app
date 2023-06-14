@@ -3,7 +3,18 @@ import "./popularcard.css";
 import cities from "../../api/populardeals.json"
 
 
+
 const PopularCard = () => {
+
+ 
+//  const navigation = useNavigate()
+//   const handlesubmit = (value) => {
+//     if(location === '/hotel') {
+//       console.log("clicked")
+//       localStorage.setItem('state', value)
+//       navigation('/flight')
+//     }
+//   }
   return (
     <>
       <div className="section-padding ey-popular_card">
@@ -27,8 +38,9 @@ const PopularCard = () => {
               <div className="ey-popular_card-cards_title">
                 <h4>{city.title}</h4>
                 <div className="ey-popular_card-cards_title-links">
-                  <a href="/">Flights</a>
-                  <a href="/">hotels</a>
+                  <p>{city.disc}</p>
+                  {/* <p onClick={() => handlesubmit(city.title)} >Flights</p>
+                  <p href="/">hotels</p> */}
                 </div>
               </div>
             </article>

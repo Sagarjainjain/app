@@ -1,42 +1,84 @@
 .input {
-    padding: 0.75rem 4rem 0.75rem 1rem;
-    outline: 0;
-    border-bottom: 2px solid gray;
-    border: 0;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    width: 100%;
+  padding: 0.75rem 4rem 0.75rem 1rem;
+  outline: 0;
+  border-bottom: 2px solid gray;
+  border: 1px solid rgb(151, 151, 151);
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .mg-r {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-
+.width-75 {
+  width: 270px;
+}
 .width-80 {
-    width: 95%;
-    padding-right: 0rem ;
+  padding-left: 1rem;
+  width: 275px;
+
+  padding-right: 0rem;
+}
+.width-85 {
+
+  width: 250px;
 }
 .width-60 {
-    padding-right: 1rem;
-    margin: 0;
-    margin-bottom: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 .width-90 {
-    padding-right: 0.50rem ;
+  padding-right: 0.5rem;
 }
-@media screen and (min-width: 481px) and (max-width: 820px) {
- 
-};
+.margin-bt {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 322px) and (max-width: 469px) {
+      input {
+    width: 80%;
+  }
+  .width-60 {
+    padding-right: 0rem;
+  }
+  .input-placeholder {
+    font-size: 12px;
+  }
+  .width-85 {
+  width: 230px;
+  font-size: 14px;
+}
+.width-80 {
+    width: 250px;
+    font-size: 14px;
+}
+.width-75 {
+  width: 220px;
+}
+}
 /* mobile ratio */
-@media screen and (min-width: 100px) and (max-width: 480px) {
-    input {
-        width: 80%;
-    }
-    .width-60 {
-    padding-right: 0rem ;
+@media screen and (min-width: 100px) and (max-width: 321px) {
+  input {
+    width: 80%;
+  }
+  .width-60 {
+    padding-right: 0rem;
+  }
+  .input-placeholder {
+    font-size: 12px;
+  }
+  .width-85 {
+  width: 150px;
+  font-size: 14px;
 }
-    .input-placeholder {
-        font-size: 12px;
-    }
+.width-80 {
+    width: 170px;
+    font-size: 14px;
+}
+.width-75 {
+  width: 175px;
+}
 }

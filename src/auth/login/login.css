@@ -13,6 +13,17 @@ background: -webkit-linear-gradient(315deg, hsla(194, 93%, 53%, 1) 5%, hsla(218,
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#18c3f7", endColorstr="#2173fd", GradientType=1 );
 }
+
+#btn {
+  width: 150px;
+  background-color: #252525;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#btn:hover {
+  background-color: #454545;
+}
 .ey-login_card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 1rem;
@@ -27,6 +38,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#18c3f7", en
 
   border-radius: 10px;
 }
+
 .ey-login_card-header {
   width: 100%;
   background-color: yellow;
@@ -59,8 +71,19 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+}
+.ey-password {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.icon {
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 /* 
 @media screen and (min-width: 481px) and (max-width: 820px) {
@@ -71,6 +94,7 @@ form {
   form {
     width: 70%;
     margin-top: 2rem;
+    align-items: center;
   }
   .ey-login_card {
     width: 80%;

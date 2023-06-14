@@ -25,6 +25,28 @@
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#18c3f7", endColorstr="#2173fd", GradientType=1 );
 }
+.nobooking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.nobooking img {
+    height: 80%;
+    width: 70%;
+}
+.loader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px
+}
+.ey-details_body {
+    margin-top: 1rem;
+}
 .ey-details_container {
     width: 375px;
     height: 80%;
@@ -40,13 +62,13 @@
     color: white;
 }
 .ey-details_body-list {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
 .ey-details_body-list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 
     border-bottom: 1px solid gray;
 }

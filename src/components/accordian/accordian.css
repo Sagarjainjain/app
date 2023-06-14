@@ -84,9 +84,9 @@
     max-width: 364px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: absolute;
-   left: 0; 
-  right: 275px; 
-  top: 403px;
+   left: 30px; 
+   
+  top: 510px;
   margin-left: auto; 
   margin-right: auto; 
 border-radius: 10px;
@@ -104,12 +104,12 @@ border-radius: 10px;
     .ey-filter_content {
     background-color: white;
     padding: 2rem;
-    max-width: 250px;
+    max-width: 260px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: absolute;
    left: 0; 
   right: 0; 
-  top: 400px;
+  top: 460px;
   margin-left: auto; 
   margin-right: auto; 
 border-radius: 10px;
@@ -131,7 +131,7 @@ border-radius: 10px;
     position: absolute;
    left: 0; 
   right: 0; 
-  top: 350px;
+  top: 420px;
   margin-left: auto; 
   margin-right: auto; 
 border-radius: 10px;

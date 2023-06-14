@@ -5,14 +5,18 @@ import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const navigate = useNavigate();
-
-    const handleProfile = () => {
-        navigate("/profile");
+  const navigate = useNavigate();
+  const User = localStorage.getItem("profile");
+  const handleProfile = () => {
+    if (User) {
+      navigate("/profile");
+    } else {
+      navigate("/login");
     }
-    const handleback = () => {
-        navigate("/");
-    }
+  };
+  const handleback = () => {
+    navigate("/");
+  };
   return (
     <nav className="navbar">
       <IoIosArrowBack onClick={handleback} className="navbar-button" />

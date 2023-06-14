@@ -2,31 +2,37 @@
     {
         "_id": 120101,
         "title": "Delhi",
+        "disc": "Delhi is a city where ancient and modern blend seamlessly together. ",
         "media_image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVsaGl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
     },
     {
         "_id": 120102,
         "title": "Lucknow",
+        "disc": "This bustling city, famed for its Nawabi era finesse and amazing food",
         "media_image": "https://images.unsplash.com/photo-1601752874509-0e350467dc7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bHVja25vdyUyMHV0dGFyJTIwcHJhZGVzaCUyMGluZGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
         "_id": 120103,
         "title": "Udaipur",
+        "disc": "Often referred to as the 'Venice of the East', the city of lakes",
         "media_image": "https://images.unsplash.com/photo-1575994532957-773da2f83eb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dWRhaXB1cnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
         "_id": 120104,
         "title": "Chennai",
+        "disc": "Ancient temples, vibrant arts, natural wonders and a bustling culinary scene",
         "media_image": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlbm5haXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
         "_id": 120105,
         "title": "Varanasi",
+        "disc": "Varanasi is one of the oldest cities in the world, which makes it rich with cultural heritage.",
         "media_image": "https://images.unsplash.com/photo-1564509027875-ba1c00cf09c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHZhcmFuYXNpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
         "_id": 120106,
         "title": "Banaras",
+        "disc": "trade and commerce, especially for the finest silks and gold and silver brocades",
         "media_image": "https://images.unsplash.com/photo-1598761713499-7761062822c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFuYXJhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
     }
 

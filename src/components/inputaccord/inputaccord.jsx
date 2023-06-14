@@ -17,10 +17,12 @@ class InputAccord extends React.Component {
   componentDidMount() {
   }
     handlestatetrue = () => {
-      this.setState({isOpen: this.state.isOpen = true})
+      this.setState({ isOpen: true });
+      // this.setState({isOpen: this.state.isOpen = true})
     }
     handlestatefalse = () => {
-     this.setState({isOpen: this.state.isOpen = false})
+      this.setState({ isOpen: false });
+    //  this.setState({isOpen: this.state.isOpen = false})
     }
 
   handleincreasevalue = () => {
@@ -104,7 +106,6 @@ class InputAccord extends React.Component {
   }
 }
 // const InputAccord = () => {
-//     const [isOpen, setIsOpen] = useState(false)
 //     const [personvalue, setPersonValue] = ("0")
 //     // const person = 0;
 //     const rooms = 0;

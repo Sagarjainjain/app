@@ -3,7 +3,7 @@ import "./flightlist.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbPlaneInflight } from "react-icons/tb";
 import { BsArrowRight } from "react-icons/bs";
-import {ClipLoader} from "react-spinners"
+import { ClipLoader } from "react-spinners";
 import promotion from "../../assets/Promotion_page.jpg";
 // import Accordian from "../../components/accordian/Accordian";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -26,16 +26,17 @@ const FlightList = () => {
       navigate(`/signup`);
     }
   };
-
   const departure = searchParams.get("departure");
   const arrival = searchParams.get("arrival");
-  const searchdata = { departure: departure, arrival: arrival };
 
-  
+  const searchData = useMemo(() => {
+    const searchdata = { departure, arrival };
+    return searchdata;
+  }, [ arrival, departure]);
 
   useEffect(() => {
-    dispatch(fetchBySearch(searchdata));
-  }, [dispatch]);
+    dispatch(fetchBySearch(searchData));
+  }, [dispatch, searchData]);
 
   // const bestfilter = () => {
   //   const cheap = Math.min(...flightsdata.map((flight) => flight.money));
@@ -75,22 +76,22 @@ const FlightList = () => {
       </div>
     );
   }
-    return (
-      <>
-        <Navbar />
-        <div className="ey-flight_list-header section-padding">
-          <div className="ey-flight_list-header_search">
-            <AiOutlineSearch />
-          </div>
-          <div className="ey-flight_list-header_title">
-            <h2>{departure}</h2>
-            <TbPlaneInflight size={20} />
-            <h2>{arrival}</h2>
-          </div>
+  return (
+    <>
+      <Navbar />
+      <div className="ey-flight_list-header section-padding">
+        <div className="ey-flight_list-header_search">
+          <AiOutlineSearch />
         </div>
-        <section className="section">
-          <div className="ey-sorting">
-            {/* <h4>Sort By</h4>
+        <div className="ey-flight_list-header_title">
+          <h2>{departure}</h2>
+          <TbPlaneInflight size={20} />
+          <h2>{arrival}</h2>
+        </div>
+      </div>
+      <section className="section">
+        <div className="ey-sorting">
+          {/* <h4>Sort By</h4>
           <div className="ey-sorting_buttons">
             <button type="button" onClick={bestfilter}>
               Best
@@ -103,65 +104,63 @@ const FlightList = () => {
             </button>
           </div>
           <Accordian /> */}
+        </div>
+        {!flights ? (
+          <div className="noflights">
+            <ClipLoader />
           </div>
-          {!flights ? (
-            <div className="noflights">
-              <ClipLoader/>
-            </div>
-          ) : (
-            <article>
-              {flights.map((flight) => (
-                <div key={flight._id} className="ey-flight_lists">
-                  <div className="ey-flight_lists_media">
-                    {!flight.flightdetails ? (
-                      <ClipLoader color="blue" size={20} />
-                    ) : (
-                      <img
-                        src={flight.flightdetails.map(
-                          (item) => item.flightlogo
-                        )}
-                        alt="logo"
-                      />
-                    )}
-                  </div>
-                  <div className="ey-card">
-                    <div className="ey-flight_lists_flight-details">
-                      <div className="ey-flight_lists_flight-details-title">
-                        <h3>{flight.departuretime}</h3>
-                        <p>{flight.departure}</p>
-                      </div>
-                      <div className="ey-flight_lists_flight-details-data">
-                        <p>
-                          {flight.distancehr}h {flight.distancemin}m
-                        </p>
-                        <TbPlaneInflight size={20} />
-                        <p>Direct</p>
-                      </div>
-                      <div className="ey-flight_lists_flight-details-title">
-                        <h3>{flight.arrivaltime}</h3>
-                        <p>{flight.arrival}</p>
-                      </div>
+        ) : (
+          <article>
+            {flights.map((flight) => (
+              <div key={flight._id} className="ey-flight_lists">
+                <div className="ey-flight_lists_media">
+                  {!flight.flightdetails ? (
+                    <ClipLoader color="blue" size={20} />
+                  ) : (
+                    <img
+                      src={flight.flightdetails.map((item) => item.flightlogo)}
+                      alt="logo"
+                    />
+                  )}
+                </div>
+                <div className="ey-card">
+                  <div className="ey-flight_lists_flight-details">
+                    <div className="ey-flight_lists_flight-details-title">
+                      <h3>{flight.departuretime}</h3>
+                      <p>{flight.departure}</p>
+                    </div>
+                    <div className="ey-flight_lists_flight-details-data">
+                      <p>
+                        {flight.distancehr}h {flight.distancemin}m
+                      </p>
+                      <TbPlaneInflight size={20} />
+                      <p>Direct</p>
+                    </div>
+                    <div className="ey-flight_lists_flight-details-title">
+                      <h3>{flight.arrivaltime}</h3>
+                      <p>{flight.arrival}</p>
                     </div>
                   </div>
-                  <div className="ey-flight_lists_flight-price">
-                    <h3>₹{flight.money}</h3>
-                    <button
-                      type="button"
-                      onClick={() => handleSumbit(flight._id)}
-                    >
-                      Select <BsArrowRight />
-                    </button>
-                  </div>
                 </div>
-              ))}
-            </article>
-          )}
-          <div className="ey-promotion">
-            <img src={promotion} alt="" />
-          </div>
-        </section>
-      </>
-    );
+                <div className="ey-flight_lists_flight-price">
+                  <h3>₹{flight.money}</h3>
+                  <button
+                    type="button"
+                    onClick={() => handleSumbit(flight._id)}
+                  >
+                    Select <BsArrowRight />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </article>
+        )}
+        <div className="ey-promotion">
+          <img src={promotion} alt="" />
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default FlightList;

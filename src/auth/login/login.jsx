@@ -14,8 +14,8 @@ const Login = () => {
 
   const navigate = useNavigate()
   const [loginData, setLoginData] = useState({
-    email: "Sagarjain.jain10@gmail.com",
-    password: "Sagar@2004",
+    email: "",
+    password: "",
   });
 
   const handleSubmit = (e) => {

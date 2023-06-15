@@ -1,0 +1,26 @@
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+    width: 100%;
+}
+.paginate li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0.35rem 1rem;
+    margin: 0 10px;
+    border: 1px solid #2173FD;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.paginate li:hover {
+    color: white;
+    background-color: #2173FD;
+}
+@media screen and (min-width: 100px) and (max-width: 320px) {
+    .paginate li {
+        padding: 0.25rem 0.750rem;
+    }
+    
+}

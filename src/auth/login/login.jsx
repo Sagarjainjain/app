@@ -29,7 +29,7 @@ const Login = () => {
         <h1>Login Page</h1>
         <form onSubmit={handleSubmit}>
           <Input
-            placeholder="Enter Username"
+            placeholder="Enter Email"
             className="width-85"
             type="text"
             onChange={(e) =>

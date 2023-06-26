@@ -42,7 +42,7 @@ if (userbooking[0] === []) return (
 
 return (
   <div className="ey-details">
-    <div className="ey-details_container">
+    <div className="ey-details_container-hotel ">
       <div className="ey-details_header">
         <h1>Hotel Bookings</h1>
       </div>

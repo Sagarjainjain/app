@@ -5,7 +5,8 @@ import {
   AUTH_CREATE,
   AUTH_BOOKING_UPDATE,
   AUTH_HOTEL_BOOKING_UPDATE,
-  DELETEACCOUNT
+  DELETEACCOUNT,
+  LOGOUT
 } from "../constants/actionType";
 
 export const createNewAccount = (formdata, navigate) => async (dispatch) => {
@@ -34,7 +35,11 @@ export const getUser = (userid) => async (dispatch) => {
 
     dispatch({ type: AUTH_USER, payload: data });
   } catch (error) {
-    console.log(error);
+    const status = error.response.status
+    if(status === 404) {
+      dispatch({type: LOGOUT })
+    }
+
   }
 };
 export const updateBooking = (id, booking) => async (dispatch) => {

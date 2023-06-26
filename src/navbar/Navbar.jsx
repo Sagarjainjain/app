@@ -4,16 +4,20 @@ import { CgProfile } from "react-icons/cg";
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 
+
 const Navbar = () => {
   const navigate = useNavigate();
-  const User = localStorage.getItem("profile");
+
+  const User = JSON.parse(localStorage.getItem("profile"));
+
   const handleProfile = () => {
-    if (User) {
-      navigate("/profile");
-    } else {
+    if (!User) {
       navigate("/login");
+    } else {
+      navigate("/profile");
     }
   };
+
   const handleback = () => {
     navigate("/");
   };

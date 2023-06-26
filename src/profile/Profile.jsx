@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./profile.css";
 
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { ClipLoader } from "react-spinners";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { LOGOUT } from "../constants/actionType";
-import {deleteAccount} from "../actions/auth"
+import {deleteAccount, getUser} from "../actions/auth"
 
 const ProfilePage = () => {
-
+  const UserData = useSelector((state) => state.User)
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const User = JSON.parse(localStorage.getItem("profile")).existingUser;
-
-
+  console.log(UserData)
+  useEffect(() => {
+    dispatch(getUser(User._id))
+  }, [dispatch, User._id])
   
   const handleLogout = () => {
     dispatch({ type: LOGOUT });

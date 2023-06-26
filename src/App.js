@@ -3,7 +3,7 @@ import './App.css';
 
 import Login from './auth/login/login';
 import Signup from './auth/signup/Signup';
-import {BrowserRouter, Route, Routes,  Navigate} from "react-router-dom"
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 
 import ProfilePage from './profile/Profile';
 // import FlightDetails from './profile/flightdetails/flightdetails';
@@ -23,14 +23,14 @@ import HotelTicket from './profile/hotelticket/hotelTicket';
 import FlightTicketDetails from './profile/flightticket/flightticket';
 
 function App() {
-  const User = localStorage.getItem("profile")
+  
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
           path="/profile"
-          element={!User ? <Navigate to="/login" /> : <ProfilePage />}
+          element={<ProfilePage />}
         />
         <Route path='/profile/flights/:id' element={<FlightTicketDetails/>}/>
         <Route path='/profile/hotels/:id' element={<HotelTicket/>}/>

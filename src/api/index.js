@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const API = axios.create({
-  baseURL: "https://exploreyourself-sever-production.up.railway.app/",
+  baseURL: "https://clean-red-underclothes.cyclic.app/",
   // baseURL: "http://localhost:5000/",
 });
 

@@ -27,7 +27,7 @@ const ReviewSection = ({ user, params }) => {
 
   const reviewsdata = [...hotelReview];
   const review = reviewsdata[0];
-  const data = review?.slice(0, 3)
+  const reviewList = review?.slice(0, 3)
 
   
   const handleNavigate = () => {
@@ -43,7 +43,7 @@ const ReviewSection = ({ user, params }) => {
     }
   };
 
-  if (!review?.length && !isLoading)
+  if (!reviewList?.length && !isLoading)
     return (
       <div className="review">
         <div className="review-input">
@@ -69,27 +69,26 @@ const ReviewSection = ({ user, params }) => {
     );
 
   return isLoading ? (
-      <div className="review">
-        <div className="review-input">
-          <form action="" className="review-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="input-review"
-              placeholder="Enter your Review"
-              onChange={(e) =>
-                setReviewData({ ...reviewData, disc: e.target.value })
-              }
-            />
-            <button type="sumbit">Add Review</button>
-          </form>
-        </div>
-        <div className="review-group_cards">
-          <div className="loading">
+    <div className="review">
+      <div className="review-input">
+        <form action="" className="review-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="input-review"
+            placeholder="Enter your Review"
+            onChange={(e) =>
+              setReviewData({ ...reviewData, disc: e.target.value })
+            }
+          />
+          <button type="sumbit">Add Review</button>
+        </form>
+      </div>
+      <div className="review-group_cards">
+        <div className="loading">
           <ClipLoader />
-          </div>
         </div>
       </div>
-
+    </div>
   ) : (
     <div className="review">
       <div className="review-input">
@@ -106,8 +105,8 @@ const ReviewSection = ({ user, params }) => {
         </form>
       </div>
       <div className="review-group_cards">
-        {data &&
-          data.map((item) => (
+        {reviewList &&
+          reviewList.map((item) => (
             <div key={item.id + item.date} className="review-card">
               <div className="review-card_title">
                 <h1>Review Added by</h1>
@@ -119,8 +118,8 @@ const ReviewSection = ({ user, params }) => {
               <div className="review-card_footer"></div>
             </div>
           ))}
-          
-        {review && review.length === 0 ? (
+
+        {reviewList && reviewList.length === 0 ? (
           <div style={{ width: "1px", height: "1px" }}></div>
         ) : (
           <div

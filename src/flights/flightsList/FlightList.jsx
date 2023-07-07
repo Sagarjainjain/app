@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./flightlist.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbPlaneInflight } from "react-icons/tb";
@@ -18,6 +18,7 @@ const FlightList = () => {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSumbit = (id) => {
     if (User) {
@@ -32,10 +33,12 @@ const FlightList = () => {
   const searchData = useMemo(() => {
     const searchdata = { departure, arrival };
     return searchdata;
-  }, [ arrival, departure]);
+  }, [arrival, departure]);
 
   useEffect(() => {
+    setIsLoading(true);
     dispatch(fetchBySearch(searchData));
+    setIsLoading(false);
   }, [dispatch, searchData]);
 
   // const bestfilter = () => {
@@ -69,11 +72,26 @@ const FlightList = () => {
   //   const cheapPrice = flightbookings.filter((item) => item.money === cheap);
   // };
 
-  if (flights === []) {
+  if (!flights?.length && !isLoading) {
     return (
-      <div className="noflights">
-        <NoFlights />
-      </div>
+      <>
+        <Navbar />
+        <div className="ey-flight_list-header section-padding">
+          <div className="ey-flight_list-header_search">
+            <AiOutlineSearch />
+          </div>
+          <div className="ey-flight_list-header_title">
+            <h2>{departure}</h2>
+            <TbPlaneInflight size={20} />
+            <h2>{arrival}</h2>
+          </div>
+        </div>
+        <section className="section">
+          <div className="noflights">
+            <NoFlights />
+          </div>
+        </section>
+      </>
     );
   }
   return (
@@ -105,7 +123,7 @@ const FlightList = () => {
           </div>
           <Accordian /> */}
         </div>
-        {!flights ? (
+        {isLoading ? (
           <div className="noflights">
             <ClipLoader />
           </div>
@@ -156,7 +174,7 @@ const FlightList = () => {
           </article>
         )}
         <div className="ey-promotion">
-          <img src={promotion} alt="" />
+          <img src={promotion} alt="promotion" />
         </div>
       </section>
     </>

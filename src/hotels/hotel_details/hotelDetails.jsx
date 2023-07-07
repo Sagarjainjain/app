@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import "./hoteldetails.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getHotelId } from "../../actions/hotels";
+import { getHotelId, getHotelReviewsId } from "../../actions/hotels";
 import {updateHotelBooking} from "../../actions/auth"
 import Navbar from "../../navbar/Navbar";
 import { AiFillStar } from "react-icons/ai";
+import ReviewSection from "../../components/reviews/review";
 
 const HotelDetails = () => {
   const navigate = useNavigate()
@@ -24,9 +25,9 @@ const HotelDetails = () => {
   }
 
 
-
   useEffect(() => {
     dispatch(getHotelId(params));
+    dispatch(getHotelReviewsId(params))
   }, [dispatch, params]);
   return (
     <>
@@ -102,6 +103,7 @@ const HotelDetails = () => {
             </div>
           </div>
         ))}
+        <ReviewSection user={user} params={params} />
       </div>
     </>
   );

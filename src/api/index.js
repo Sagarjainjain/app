@@ -1,8 +1,9 @@
 import axios from "axios";
 
+
 const API = axios.create({
-  baseURL: "https://exploreyourself-sever-production.up.railway.app/",
-  // baseURL: "http://localhost:5000/",
+  // baseURL: "https://exploreyourself-sever-production.up.railway.app/",
+  baseURL: "http://localhost:5000/",
 });
 
 API.interceptors.request.use((req) => {
@@ -24,7 +25,9 @@ export const FetchSingleFlight = (flightid) => API.get(`flights/${flightid}`)
 
 // hotels
 export const FetchBySearchHotel = (SearchQuery) => API.get(`/hotel/search?hotelplace=${SearchQuery}`)
-export const FetchbyId = (id) => API.get(`/hotel/${id}`)
+export const FetchbyId = (id) => API.get(`/hotel/${id}`);
+export const FetchReviewsById = (id) => API.get(`hotel/reviews/${id}`)
+export const updateReview = (id, reviewData) => API.patch(`/hotel/reviews/${id}`, reviewData);
 
 // users 
 export const createAccount = (userData) => API.post('user/signin', userData )

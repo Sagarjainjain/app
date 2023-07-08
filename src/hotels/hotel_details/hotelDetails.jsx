@@ -8,7 +8,7 @@ import Navbar from "../../navbar/Navbar";
 import { AiFillStar } from "react-icons/ai";
 import ReviewSection from "../../components/reviews/review";
 import Footer from "../../footer/Footer"
-import {ClipLoader} from "react-spinners"
+
 
 const HotelDetails = () => {
   const navigate = useNavigate()

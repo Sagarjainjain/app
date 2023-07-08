@@ -24,7 +24,7 @@ useEffect(() => {
 const handleSubmit = (id) => {
   navigate(`/profile/hotels/${id}`)
 }
-if (userbooking[0] === []) return (
+if (user && user.length === 0) return (
   <div className="ey-details">
     <div className="ey-details_container">
       <div className="ey-details_header">

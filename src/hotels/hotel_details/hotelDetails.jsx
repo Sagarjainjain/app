@@ -7,6 +7,8 @@ import {updateHotelBooking} from "../../actions/auth"
 import Navbar from "../../navbar/Navbar";
 import { AiFillStar } from "react-icons/ai";
 import ReviewSection from "../../components/reviews/review";
+import Footer from "../../footer/Footer"
+import {ClipLoader} from "react-spinners"
 
 const HotelDetails = () => {
   const navigate = useNavigate()
@@ -35,10 +37,11 @@ const HotelDetails = () => {
       <div className="hoteldetails-container-details">
         <div className="hoteldetails-images">
           <div className="hoteldetails-images-1">
+      
             <img
-              className="image-1"
-              src={hotel.map((item) => item.photos[0])}
-              alt="Hotel-1"
+            className="image-1"
+            src={hotel.map((item) => item.photos[0])}
+            alt="Hotel-1"
             />
           </div>
           <div className="hoteldetails-images-2">
@@ -105,6 +108,7 @@ const HotelDetails = () => {
         ))}
         <ReviewSection user={user} params={params} />
       </div>
+      <Footer/>
     </>
   );
 };

@@ -72,7 +72,7 @@ const FlightList = () => {
   //   const cheapPrice = flightbookings.filter((item) => item.money === cheap);
   // };
 
-  if (!flights?.length && !isLoading) {
+  if (!flights?.length  && !isLoading) {
     return (
       <>
         <Navbar />

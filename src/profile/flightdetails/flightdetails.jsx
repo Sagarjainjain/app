@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect, useState} from "react";
 import "./flightdetails.css";
 import { TbPlaneInflight } from "react-icons/tb";
 import { IoIosArrowForward } from "react-icons/io";
@@ -16,11 +16,14 @@ const FlightDetails = () => {
   const flight = User.map((item) => item.flightbookings);
   const userbooking = [...flight];
   const user = userbooking[0];
+  const [isLoading, setIsLoading] = useState(false);
   // const [currentPage, setCurrentPage] = useState(1);
   // const [postPerPage] = useState(1);
 
   useEffect(() => {
+    setIsLoading(true)
     dispatch(getUser(id));
+    setIsLoading(false)
   }, [dispatch, id]);
 
     // const indexofLastPost = currentPage * postPerPage;
@@ -32,7 +35,7 @@ const FlightDetails = () => {
   const handleSubmit = (id) => {
     navigate(`/profile/flights/${id}`);
   };
-  if (userbooking[0] === [])
+  if (user && user.length === 0)
     return (
       <div className="ey-details">
         <div className="ey-details_container">
@@ -60,7 +63,7 @@ const FlightDetails = () => {
             <h1>Flight Bookings</h1>
           </div>
           <div className="ey-details_body">
-            {!user ? (
+            {isLoading ? (
               <div className="loader">
                 <ClipLoader color="hsla(194, 93%, 53%, 1)" size={40} />
               </div>

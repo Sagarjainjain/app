@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
-import "./login.css"
-import {useDispatch} from "react-redux"
-import {loginAccount} from '../../actions/auth'
-import Input from '../../components/input/input';
-import { Link, useNavigate} from 'react-router-dom';
-import { AiFillEye,AiFillEyeInvisible } from "react-icons/ai";
-
+import React, { useState } from "react";
+import "./login.css";
+import { useDispatch } from "react-redux";
+import { loginAccount } from "../../actions/auth";
+import Input from "../../components/input/input";
+import { Link, useNavigate } from "react-router-dom";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
-  const [ishidden, setIsHidden] = useState(false)
+  const [ishidden, setIsHidden] = useState(false);
+
   const dispatch = useDispatch();
 
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    dispatch(loginAccount(loginData, navigate))
-   
-  }
+    e.preventDefault();
+    dispatch(loginAccount(loginData, navigate));
+  };
   return (
     <div className="ey-login">
       <div className="ey-login_card">
@@ -46,9 +44,17 @@ const Login = () => {
               }
             />
             {ishidden ? (
-              <AiFillEye className="icon" size={30} onClick={() => setIsHidden(false)} />
-              ) : (
-              <AiFillEyeInvisible className="icon" size={30} onClick={() => setIsHidden(true)} />
+              <AiFillEye
+                className="icon"
+                size={30}
+                onClick={() => setIsHidden(false)}
+              />
+            ) : (
+              <AiFillEyeInvisible
+                className="icon"
+                size={30}
+                onClick={() => setIsHidden(true)}
+              />
             )}
           </div>
           <button type="submit">Login</button>
@@ -58,12 +64,20 @@ const Login = () => {
             </Link>
           </div>
         </form>
-        <div className='goback'>
-        <button type='button' id='btn' className='goback-btn' onClick={() => navigate('/')}> ↩  Go Back</button>
+        <div className="goback">
+          <button
+            type="button"
+            id="btn"
+            className="goback-btn"
+            onClick={() => navigate("/")}
+          >
+            {" "}
+            ↩ Go Back
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;

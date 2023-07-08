@@ -47,7 +47,7 @@ const ReviewSection = ({ user, params }) => {
     return (
       <div className="review">
         <div className="review-input">
-          <form action="" className="review-form" onSubmit={handleSubmit}>
+          <form className="review-form" onSubmit={handleSubmit}>
             <input
               type="text"
               className="input-review"
